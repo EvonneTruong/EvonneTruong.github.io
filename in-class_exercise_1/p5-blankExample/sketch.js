@@ -2,18 +2,33 @@
 
 
 function setup() {
-  // put setup code here --> this runs once upon launch
-
   createCanvas(500, 500);
-  background(0);
+  ellipsewidth=50
 
-  console.log("hello art 75, i am  printing to the console")
-  
 }
 
-
 function draw() {
-  // put drawing code here --> this loops every frame
+  //
+  // set background color in grayscale:
+  background(255, 90, 160);
+
+  // draw rectangle
+  fill(100, 200,  random(0, 255));
+  stroke(0, 0, 255);
+  strokeWeight(5);
+  rect(350, 100, 75, 160);
+
+    // draw ellipse
+    ellipsewidth++
+    fill(0, 150, 200);
+    stroke(255);
+    strokeWeight(2);
+    ellipse(390, 175, ellipsewidth);
+
+    fill(0, 150, 200);
+    stroke(255)
+    strokeWeight(2)
+    ellipse(mouseX, mouseY, mouseX);
 }
 
 
