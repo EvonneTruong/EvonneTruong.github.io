@@ -6,6 +6,9 @@ function setup() {
 
   createCanvas(500, 500);
   background(0);
+
+  console.log("hello art 75, i am  printing to the console")
+  
 }
 
 
