@@ -13,7 +13,7 @@ function draw() {
   background(255, 90, 160);
 
   // draw rectangle
-  fill(100, 200,  random(0, 255));
+  fill(100, 200, 200);
   stroke(0, 0, 255);
   strokeWeight(5);
   rect(350, 100, 75, 160);
@@ -23,12 +23,12 @@ function draw() {
     fill(0, 150, 200);
     stroke(255);
     strokeWeight(2);
-    ellipse(390, 175, ellipsewidth);
+    ellipse(ellipsewidth, 250, 50);
 
     fill(0, 150, 200);
     stroke(255)
     strokeWeight(2)
-    ellipse(mouseX, mouseY, mouseX);
+    ellipse(mouseX, mouseY, 50);
 }
 
 
