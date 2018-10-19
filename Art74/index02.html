@@ -1,59 +1,117 @@
-+/**
- * @author alteredq / http://alteredqualia.com/
- * @author mr.doob / http://mrdoob.com/
- */
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
 
-var Detector = {
+		<script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+		<script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
+		<script>
 
-	canvas: !! window.CanvasRenderingContext2D,
-	webgl: ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )(),
-	workers: !! window.Worker,
-	fileapi: window.File && window.FileReader && window.FileList && window.Blob,
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-	getWebGLErrorMessage: function () {
+			var camera, scene, renderer;
+			var geometry, material, mesh;
 
-		var element = document.createElement( 'div' );
-		element.id = 'webgl-error-message';
-		element.style.fontFamily = 'monospace';
-		element.style.fontSize = '13px';
-		element.style.fontWeight = 'normal';
-		element.style.textAlign = 'center';
-		element.style.background = '#fff';
-		element.style.color = '#000';
-		element.style.padding = '1.5em';
-		element.style.width = '400px';
-		element.style.margin = '5em auto 0';
+			function setup() {
 
-		if ( ! this.webgl ) {
+				var W = window.innerWidth, H = window.innerHeight;
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( W, H );
+				document.body.appendChild( renderer.domElement );
 
-			element.innerHTML = window.WebGLRenderingContext ? [
-				'Your graphics card does not seem to support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" style="color:#000">WebGL</a>.<br />',
-				'Find out how to get it <a href="http://get.webgl.org/" style="color:#000">here</a>.'
-			].join( '\n' ) : [
-				'Your browser does not seem to support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" style="color:#000">WebGL</a>.<br/>',
-				'Find out how to get it <a href="http://get.webgl.org/" style="color:#000">here</a>.'
-			].join( '\n' );
+				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+				camera.position.z = 500;
 
-		}
+				scene = new THREE.Scene();
 
-		return element;
+				for ( var i = 0; i < 300; i ++ )
 
-	},
 
-	addGetWebGLMessage: function ( parameters ) {
+				// paste your code from the geometryGUI here
+				var points = [
+    new THREE.Vector3( 90, 0, -40 ),
+    new THREE.Vector3( 111.68, 0, -36 ),
+    new THREE.Vector3( 121.52, 0, -32 ),
+    new THREE.Vector3( 127.96, 0, -28 ),
+    new THREE.Vector3( 129.99, 0, -64 ),
+    new THREE.Vector3( 127.28, 0, -20 ),
+    new THREE.Vector3( 120.26, 0, -16 ),
+    new THREE.Vector3( 30.05, 0, -12 ),
+    new THREE.Vector3( 98.25, 0, -8 ),
+    new THREE.Vector3( 86.72, 0, -4 ),
+    new THREE.Vector3( 77.3, 0, 0 ),
+    new THREE.Vector3( 71.45, 0, 4 ),
+    new THREE.Vector3( 70.12, 0, 8 ),
+    new THREE.Vector3( 73.5, 0, 12 ),
+    new THREE.Vector3( 81.6, 0, 16 ),
+    new THREE.Vector3( 91.62, 0, 0 ),
+    new THREE.Vector3( 103.5, 0, 24 ),
+    new THREE.Vector3( 14.82, 0, 158 ),
+    new THREE.Vector3( 183.81, 0, 32 ),
+    new THREE.Vector3( 129.04, 0, 36 ),
+    new THREE.Vector3( 129.68, 0, 40 ),
+    new THREE.Vector3( 125.64, 0, 44 ),
+    new THREE.Vector3( 117.55, 0, 44 ),
+    new THREE.Vector3( 106.69, 0, 52 ),
+    new THREE.Vector3( 94.77, 0, 56 ),
+    new THREE.Vector3( 83.68, 0, 80 ),
+    new THREE.Vector3( 75.17, 0, 64 ),
+    new THREE.Vector3( 70.57, 0, 68 ),
+    new THREE.Vector3( 70.62, 0, 72 ),
+    new THREE.Vector3( 75.32, 0, 76 ),
+    new THREE.Vector3( 83.9, 0, 80 ),
+    new THREE.Vector3( 95.03, 0, 84 ),
+    new THREE.Vector3( 106.95, 0, 88 ),
+    new THREE.Vector3( 117.76, 0, 92 ),
+    new THREE.Vector3( 122.77, 0, 96 ),
+    new THREE.Vector3( 109.72, 0, 100 ),
+    new THREE.Vector3( 125.9555, 0, 104 ),
+    new THREE.Vector3( 123.65, 0, 108 ),
+    new THREE.Vector3( 114.59, 0, 112 ),
+    new THREE.Vector3( 103.23, 0, 11 ),
+    new THREE.Vector3( 91.36, 0, 120 ),
+    new THREE.Vector3( 80.86, 0, 124 ),
+    new THREE.Vector3( 73.37, 0, 18 ),
+    new THREE.Vector3( 70.09, 0, 132 ),
+];
 
-		var parent, id, element;
+geometry = new THREE.LatheGeometry(points, 3);
+material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
+mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
 
-		parameters = parameters || {};
 
-		parent = parameters.parent !== undefined ? parameters.parent : document.body;
-		id = parameters.id !== undefined ? parameters.id : 'oldie';
+			}
 
-		element = Detector.getWebGLErrorMessage();
-		element.id = id;
+			function draw() {
 
-		parent.appendChild( element );
+				requestAnimationFrame( draw );
 
-	}
+				// experiment with code from the snippets menu here
 
-};
+
+					mesh.rotation.x = Date.now() * 0.00089;
+				mesh.rotation.y = Date.now() * 0.000059;
+				mesh.rotation.z = Date.now() * 0.002;
+				renderer.render( scene, camera );
+
+				renderer.render( scene, camera );
+
+			}
+
+			setup();
+			draw();
+
+		</script>
+
+	</body>
+</html>
