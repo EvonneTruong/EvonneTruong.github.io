@@ -9,3 +9,8 @@ body {
 h1 {
   padding: 20px 0px 10px 0px;
 }
+p {
+  line-height: 2;
+  width: 45%
+/* oh man this wouldve helped a lot earleir h */
+}
