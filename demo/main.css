@@ -1,0 +1,18 @@
+body{
+  text-align: center;
+  margin: 30px auto;
+  width: 80%;  
+
+}
+
+h1 {
+  color: pink ;
+  }
+
+.blackdiv{
+text-align: left;
+  color: lightblue;
+  background-color: gray;
+  padding: 5px
+
+}
