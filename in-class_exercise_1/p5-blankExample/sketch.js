@@ -5,6 +5,7 @@ function setup() {
   createCanvas(500, 500);
   ellipsewidth=50
 
+
 }
 
 function draw() {
@@ -29,6 +30,7 @@ function draw() {
     stroke(255)
     strokeWeight(2)
     ellipse(mouseX, mouseY, 50);
+
 }
 
 
