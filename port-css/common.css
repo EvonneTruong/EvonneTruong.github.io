@@ -20,7 +20,7 @@ body{
 
 	/*Banner*/
 		div.banner{
-			background-color: #282538;
+			background-color: #282e39;
 			color: #e6bc60;
 			padding-top: 5px;}
 		div.owner{
@@ -39,7 +39,7 @@ body{
 			margin: 0px;
 			padding: 0px;
 			overflow: hidden;
-			background-color: #282538;}
+			background-color: #282e39;}
 		li.navbar_txt{
 			float: left;
 			/*border-top-left-radius: 3px;
