@@ -1,0 +1,68 @@
+body {
+  margin: 30px auto;
+  width: 85%;
+  max-width: 800px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+}
+
+/* This changes color and removes default underline in links  */
+
+p {
+  color: #69CBBB;
+  text-decoration: none;
+}
+
+
+  a:link {
+      color: pink;
+  }
+
+  /* visited link */
+  a:visited {
+      color: pink;
+  }
+  a:hover {
+      color: #FFDEAD;
+  }
+
+
+/* Centers images */
+
+img {
+  display: block;
+  margin: 0px auto;
+
+}
+
+/* When you put a period in front of a CSS declaration, it indicates you are
+creating a new class. We can apply this to div elements to create different
+portfolio entries */
+
+.portfolio-item {
+  margin-top: 60px;
+  padding: 40px;
+  background-color: #f7f7f7;
+}
+
+}
+
+/* The embed-container class is for iframes containing content from Vimeo. This will allow videos to resize when the window is scaled, making this site mobile-friendly! */
+
+.embed-container {
+  position: relative;
+  padding-bottom: 5%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+
+}

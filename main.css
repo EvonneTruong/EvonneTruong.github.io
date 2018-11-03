@@ -19,6 +19,18 @@ p {
   text-decoration: none;
 }
 
+a:link {
+    color: pink;
+}
+
+/* visited link */
+a:visited {
+    color: pink;
+}
+a:hover {
+    color: #FFDEAD;
+}
+
 /* Centers images */
 
 img {

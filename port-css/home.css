@@ -1,0 +1,52 @@
+.title{
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;}
+	.title:hover{
+		color: #C3073F ;}
+
+
+
+/* Responsive */
+	.responsive{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0px 50px 60px 50px;}
+	.r-1{width: 35%;}
+	.r-2{width: 40%;}
+
+/*GIF*/
+
+/*Quote*/
+	.quote{
+		height: 200px;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 70%;}
+	.quote_section{
+		position: relative;
+		top: 0px;}
+	.quote_text{
+		margin-top: 0px;
+		margin-bottom: 20px;}
+
+	.v_l_text:hover{
+		text-decoration: underline;}
+
+.bear{color: lightseagreen;}
+
+.text{
+	color: #d5dae2;
+
+}
+
+a:link{colorcolor: #e6bc60;
+}
+
+/* visited link */
+a:visited {
+color: #e6bc60;
+}
+a:hover {
+color: #C3073F;
+}
