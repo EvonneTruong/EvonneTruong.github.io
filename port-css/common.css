@@ -2,17 +2,13 @@
 	margin: 0;
 	padding: 0;}
 
-@font-face{
-	font-family: 'eurostile';
-		src: url('../fonts/eurostile.ttf'), url('../fonts/eurostile.eot');
-	font-family: 'Pokemon_Gen1';
-		src: url('../fonts/Pokemon_Gen1.ttf'), url('../fonts/Pokemon_Gen1.eot');}
 
 body{
 	text-align: center;
 	font-family: eurostile, arial;
-	
-background-color: #464653 }
+	width: 100%;
+	  background: linear-gradient(to bottom, #020107 0%, #201b46 100%)fixed;
+}
 
 
 .topbar{
