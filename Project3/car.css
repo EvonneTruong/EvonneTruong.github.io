@@ -243,19 +243,19 @@ html, body {
   margin: 10px 0;
   padding-right: 20px;
   padding-top: 13px;
-  font: 600 13px/1 'Open Sans', sans-serif;
-  letter-spacing: 12px;
-  color: #E96F92;
+  font: 600 20px/1 'Codystar', sans-serif;
+  letter-spacing: 7px;
+  color: #edc678;
     position: absolute;
-right: 20px}
+right: 16px}
 
 .welcome h2 {
     padding-right: 20px;
-    padding-top: 50px;
-  font: 700 18px/1 'Codystar', sans-serif;
+    padding-top: 57px;
+  font: 700 14px/1 'Open Sans', sans-serif;
   letter-spacing: 5px;
 );
-  color: #edc678;
+  color: #E96F92;
   position: absolute;
     right: 20px;}
 
