@@ -1,0 +1,116 @@
+/**
+ * Settings
+ */
+ @import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
+ @import url("https://fonts.googleapis.com/css?family=Codystar");
+/**
+ * General styles
+ */
+
+}
+
+body {
+
+;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+
+  font: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-left: 20
+  padding-right: 10px;
+}
+
+/**
+ * Link style
+ */
+.myLink {
+
+  position: relative;
+  text-decoration: none;
+  color: #edc678;
+  display: inline-block;
+  border: 1px solid #edc678;
+  margin-top: 130px;
+  margin-bottom: 25px;
+  position: absolute;
+    right: 45px;
+
+
+
+}
+.myLink::before {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: #edc678;
+}
+.myLink span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 2rem;
+  color: inherit;
+  text-transform: uppercase;
+}
+.myLink:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s, height 0.2s;
+}
+.myLink:hover span {
+  color:#572e57;
+}
+
+/* the second button */
+
+.myLink2 {
+
+  position: relative;
+  text-decoration: none;
+  color: #edc678;
+  display: inline-block;
+  border: 1px solid #edc678;
+  margin-top: 130px;
+  margin-bottom: 25px;
+  position: absolute;
+  right: 165px;
+
+
+
+}
+.myLink2::before {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: #edc678;
+}
+.myLink2 span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 2rem;
+  color: inherit;
+  text-transform: uppercase;
+}
+.myLink2:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s, height 0.2s;
+}
+.myLink2:hover span {
+  color:#572e57;
+}
