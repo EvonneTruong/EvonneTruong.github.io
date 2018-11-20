@@ -16,7 +16,7 @@ h1{
   font-weight: bold;
   color:black;
   margin-bottom: 40px;
-  color: lightgray;
+  color: #edc678;
   text-shadow: 0 2px 3px #555555;
 font: 700 50px/1 'Open Sans', sans-serif;
 }
@@ -26,10 +26,13 @@ font: 700 50px/1 'Open Sans', sans-serif;
   width: 100%;
   margin: 0 auto;
   margin-top:50px;
+
 }
 
 #map_container{
   position: relative;
+  align-items: center;
+
 }
 #map{
     height: 0;
