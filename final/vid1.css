@@ -18,3 +18,29 @@ padding-left: 15%;
   padding-left: 1075px;
   padding-top:50px;
 }
+
+.howcar{
+  position: absolute;
+  margin-left: 20px;
+  padding-left: 280px;
+}
+
+.breakvid{
+  position:absolute;
+  margin-left: 240px;
+  padding-left: 900px;
+
+}
+.battery{
+  position:absolute;
+  margin-left: 240px;
+  padding-left: 900px;
+  padding-top: 220px;
+}
+
+.playlist{
+  position:absolute;
+  margin-left: 240px;
+  padding-left: 910px;
+  padding-top: 420px;
+}

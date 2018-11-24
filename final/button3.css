@@ -9,14 +9,14 @@
 
 }
 
-h {
+body {
+
+;
   display: flex;
   justify-content: center;
   align-items: right;
 
   font: 'Open Sans', sans-serif;
-  color: #edc678;
-
   font-size: 16px;
   padding-left: 20
   padding-right: 10px;
@@ -27,17 +27,15 @@ h {
  */
 .myLink {
 
-  position: relative;
+  position: absolute;
   text-decoration: none;
   color: #edc678;
   display: inline-block;
   border: 1px solid #edc678;
-  margin-top: 75px;
+  margin-top: 600px;
   margin-bottom: 25px;
   position: absolute;
     right: 45px;
-
-
 
 }
 .myLink::before {
@@ -78,10 +76,10 @@ h {
   color: #edc678;
   display: inline-block;
   border: 1px solid #edc678;
-  margin-top: 75px;
+  margin-top: 600px;
   margin-bottom: 25px;
   position: absolute;
-  right:  210px;
+  right:  245px;
 
 
 
@@ -114,27 +112,16 @@ h {
 .myLink2:hover span {
   color:#572e57;
 }
-
 .point{
   position: relative;
   text-decoration: none;
 
   display: inline-block;
 
-  margin-top: 75px;
-  margin-bottom: 25px;
-  position: absolute;
-  right: 25px;
-}
-.point2{
-  position: relative;
-  text-decoration: none;
-
-  display: inline-block;
-
-  margin-top: 75px;
+  margin-top: 590px;;
   margin-bottom: 2px;
 
   position: absolute;
   left: 25px;
+  bottom: 5;
 }
